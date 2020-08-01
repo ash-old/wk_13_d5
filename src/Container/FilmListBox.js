@@ -38,12 +38,18 @@ class FilmListBox extends Component{
 
 
 
+  upcomingUrl(){
+    let site ='https://www.imdb.com/calendar/?region=gb';
+    window.open(site);
+  }
+
+
   render(){
     return(
       <div className="filmlist-box">
       <h2>Upcoming Film Releases for UK</h2>
       <FilmList films={this.state.films}/>
-      <h3 a href='www.imdb.com/calendar/?region=gb'>View more upcoming releases >></h3>
+      <h3 onClick={this.upcomingUrl}>View more upcoming releases >></h3>
       </div>
     )
   }
